@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lista de produtos</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="tituloSite">Lista de produtos</h1>
+    </header>
+
+    <main>
+        <nav>
+            <section class="menuCategorias" aria-label="Categorias de produtos">
+                <ul class="listaMenu">
+                    <li id="todos"><a href="#" class="itemMenu">Todos Produtos</a></li>
+                    <li id="hortifruti"><a href="#" class="itemMenu">Hortifruti</a></li>
+                    <li id="padaria"><a href="#" class="itemMenu">Padaria</a></li>
+                    <li id="laticinios"><a href="#" class="itemMenu">Laticínios</a></li>
+                </ul>
+            </section>
+            <form class="pesquisaProdutos" role="search">
+                <input class="campoPesquisa" type="text" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
+                <button class="botaoPesquisa" type="button">Buscar</button>
+            </form>
+        </nav>
+        <section class="detalhesCompra">
+            <div class="valorCompra">
+                <p>Valor total dos produtos selecionados</p>
+                <span class="valorTotal"></span>
+            </div>
+        </section>
+        <section class="displayProdutos">
+            <ul class="listaProdutos">
+                <!-- DISPLAY -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rodape">
+            <span class="copyright">&copy; Dieison&rsquo;s Development,
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>.
+            </span>
+        </div>
+    </footer>
+
+    <script src="js/dataProdutos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
