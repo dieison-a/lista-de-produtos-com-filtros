@@ -51,7 +51,7 @@ main nav .menuCategorias {
     flex-wrap: wrap;
 }
 
-.listaMenu li a {
+.listaMenu li button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,22 +59,26 @@ main nav .menuCategorias {
     padding: 13px;
     background-color: #f1f1f1;
     border-radius: 5px;
-    color: #12B886;
+    color: #06694B;
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     transition-duration: 0.3s;
-    text-decoration: none;
+    border: 0;
+    cursor: pointer;
 }
 
-.listaMenu .itemMenu:hover {
-    background-color: #12B886;
-    cursor: pointer;
-    color: #f1f1f1;
+.listaMenu .itemMenu:hover,
+.listaMenu .itemMenu:focus-visible {
+    background-color: #087F5B;
+    color: #ffffff;
 }
-.itemMenu:focus {
-    background-color: #12B886;
-    color: #f1f1f1;
+
+.itemMenu:focus-visible,
+.pesquisaProdutos button:focus-visible,
+.pesquisaProdutos input:focus-visible {
+    outline: 3px solid #212529;
+    outline-offset: 3px;
 }
 
 main nav .pesquisaProdutos {
@@ -98,7 +102,7 @@ main nav .pesquisaProdutos {
 .pesquisaProdutos .botaoPesquisa {
     display: flex;
     padding: 6.5px;
-    background-color: #12B886;
+    background-color: #087F5B;
     border: none;
     border-radius: 5px;
     color: #ffffff;
@@ -107,7 +111,7 @@ main nav .pesquisaProdutos {
 }
 
 .pesquisaProdutos .botaoPesquisa:hover {
-    background-color: #0a8d66;
+    background-color: #066649;
     cursor: pointer;
 
 }
@@ -153,6 +157,15 @@ main .displayProdutos {
     width: 100%;
 }
 
+.tituloProdutos {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 .listaProdutos li {
     display: flex;
     min-width: 20%;
@@ -177,7 +190,7 @@ main .displayProdutos {
     font-family: Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #868E96;
+    color: #5C636A;
     margin: 10px 0;
 }
 
@@ -279,5 +292,14 @@ footer .rodape {
 
     .detalhesCompra .valorCompra p {
         margin: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }

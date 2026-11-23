@@ -18,25 +18,26 @@
         <nav>
             <section class="menuCategorias" aria-label="Categorias de produtos">
                 <ul class="listaMenu">
-                    <li id="todos"><a href="#" class="itemMenu">Todos Produtos</a></li>
-                    <li id="hortifruti"><a href="#" class="itemMenu">Hortifruti</a></li>
-                    <li id="padaria"><a href="#" class="itemMenu">Padaria</a></li>
-                    <li id="laticinios"><a href="#" class="itemMenu">Laticínios</a></li>
+                    <li><button id="todos" class="itemMenu" type="button" aria-controls="listaProdutos">Todos os produtos</button></li>
+                    <li><button id="hortifruti" class="itemMenu" type="button" aria-controls="listaProdutos">Hortifruti</button></li>
+                    <li><button id="padaria" class="itemMenu" type="button" aria-controls="listaProdutos">Padaria</button></li>
+                    <li><button id="laticinios" class="itemMenu" type="button" aria-controls="listaProdutos">Laticínios</button></li>
                 </ul>
             </section>
             <form class="pesquisaProdutos" role="search">
                 <input class="campoPesquisa" type="text" placeholder="Pesquisar produtos" aria-label="Pesquisar produtos">
-                <button class="botaoPesquisa" type="button">Buscar</button>
+                <button class="botaoPesquisa" type="submit">Buscar</button>
             </form>
         </nav>
         <section class="detalhesCompra">
             <div class="valorCompra">
                 <p>Valor total dos produtos selecionados</p>
-                <span class="valorTotal"></span>
+                <span class="valorTotal" aria-live="polite" aria-atomic="true"></span>
             </div>
         </section>
-        <section class="displayProdutos">
-            <ul class="listaProdutos">
+        <section class="displayProdutos" aria-labelledby="tituloProdutos">
+            <h2 class="tituloProdutos" id="tituloProdutos">Produtos</h2>
+            <ul class="listaProdutos" id="listaProdutos">
                 <!-- DISPLAY -->
             </ul>
         </section>

@@ -50,16 +50,16 @@ montarItem(produtos);
 function pesquisaProdutos() {
     const campoPesquisa = document.querySelector(".campoPesquisa")
 
-    let pesquisa = campoPesquisa.value.toLowerCase()
+    let pesquisa = campoPesquisa.value.trim().toLowerCase()
 
     let filtroPesquisa = produtos.filter((produto) => produto.secao.toLowerCase().includes(pesquisa) || produto.nome.toLowerCase().includes(pesquisa))
     return filtroPesquisa
 }
 
 function pesquisar() {
-    const botaoPesquisa = document.querySelector(".botaoPesquisa")
+    const formularioPesquisa = document.querySelector(".pesquisaProdutos")
 
-    botaoPesquisa.addEventListener("click", (event) => {
+    formularioPesquisa.addEventListener("submit", (event) => {
         event.preventDefault()
         let filtrando = pesquisaProdutos()
         montarItem(filtrando)
